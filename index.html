@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios extras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="d-flexbox" id="ejercicios">
+        <!-- Ejercicio 0) TRABAJANDO CON LA CONSOLA DEL NAVEGADOR -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>0) Presentación</p>
+            </div>
+            <div class="card-body">
+                <p>Datos del estudiante</p>
+                <h5 id="yo"></h5>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius m-1" onclick="miNombre()">Nombre</button>
+                <button class="btn btn-success border-radius m-1" onclick="miApellido()">Apellido</button>
+                <button class="btn btn-success border-radius m-1" onclick="nombreCompleto()">Nombre completo</button>
+            </div>
+        </div>
+        <!-- Ejercicio 1) Ensalada de Frutas -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>1) Ensalada de Frutas
+                </p>
+            </div>
+            <div class="card-body">
+                <p>Las frutas en la ensalda son:</p>
+                <h5 id="frutas"></h5>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius" onclick="lasFrutas(ensaladaDeFrutas)">ver</button>
+            </div>
+        </div>
+        <!-- Ejercicio 2) Promedio de Edades -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>2) Promedio de edad
+                </p>
+            </div>
+            <div class="card-body">
+                <p>Las edades son:</p>
+                <h6 id="edades"></h6>
+                <p>El promedio es:</p>
+                <h6 id="result"></h6>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius" onclick="promedio(edades)">ver</button>
+            </div>
+        </div>
+        <!-- Ejercicio 3) Mis Amigos -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>3) Mis Amigos
+                </p>
+            </div>
+            <div class="card-body">
+                <p>Mis amigos son:</p>
+                <h5 id="listaAmigos"></h5>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius" onclick="esAmigo(amigo)">ver</button>
+            </div>
+        </div>
+        <!-- Ejercicio 4) Lista de Súper -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>4) Lista de Súper</p>
+            </div>
+            <div class="card-body">
+                <p>La lista del súper es:</p>
+                <h5 id="listaSuper"></h5>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius" onclick="laLista(listaDeSuper)">ver</button>
+            </div>
+        </div>
+        <!-- Ejercicio 5) Saludo -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>5) Saludo</p>
+            </div>
+            <div class="card-body">
+                <h6>Presiona el botón para ver un mensaje de bienvenida</h6>
+                <p>También puedes hacerlo usando "saludo()" en la consola</p>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius" onclick="saludo()">ver</button>
+            </div>
+        </div>
+        <!-- Ejercicio 6) Calculando el mayor -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>6) Calculando el mayor</p>
+            </div>
+            <div class="card-body ">
+                <p>Ingrese dos valores</p>
+                <input type="number" id="n1" style="width: 100%; box-sizing: border-box;">
+                <input type="number" id="n2" style="width: 100%; box-sizing: border-box;">
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius" onclick="calculadoraMayor(n1,n2)">ver</button>
+            </div>
+        </div>
+        <!-- Ejercicio 7) Mis Amigos 2 -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>7) Mis Amigos 2</p>
+            </div>
+            <div class="card-body">
+                <p>Mis amigos son:</p>
+                <h5 id="otrosAmigos"></h5>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius" onclick="filtrarAmigos(amigo1)">Amigo 1</button>
+                <button class="btn btn-success border-radius" onclick="filtrarAmigos(amigo2)">Amigo 2</button>
+            </div>
+        </div>
+        <!-- Ejercicio 8) Tirar Dado -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>8) Tirar Dado</p>
+            </div>
+            <div class="card-body text-center">
+                <h1 id="randomNumber"></h1>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius" onclick="tirarDado()">Tirar Dado</button>
+            </div>
+        </div>
+        <!-- Ejercicio 9) Creando y consultando un objeto -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>9) ToDo List</p>
+            </div>
+            <div class="card-body">
+                <h5 id="cosa"></h5>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius m-1" onclick="mostrarTipo()">Tipo</button>
+                <button class="btn btn-success border-radius m-1" onclick="mostrarDia()">Día</button>
+                <button class="btn btn-success border-radius m-1" onclick="mostrarCantidad()">N° Productos</button>
+                <button class="btn btn-success border-radius m-1" onclick="mostrarProductos()">Productos</button>
+                <button class="btn btn-success border-radius m-1" onclick="mostrarAlerta()">Notificación</button>
+            </div>
+        </div>
+        <!-- Ejercicio 10) Consultando valores -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>10) Superhero!</p>
+            </div>
+            <div class="card-body">
+                <p>Conoce a la superheroína de esta historia:</p>
+                <h5 id="her"></h5>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius m-1" onclick="mostrarNombre()">Nombre</button>
+                <button class="btn btn-success border-radius m-1" onclick="mostrarEdad()">Edad</button>
+                <button class="btn btn-success border-radius m-1" onclick="mostrarPoder()">Superpoder</button>
+                <button class="btn btn-success border-radius m-1" onclick="mostrarSquad()">Equipo</button>
+            </div>
+        </div>
+        <!-- Ejercicio 11) Corrígeme la frase -->
+        <div class="card w-25 h-25 m-3">
+            <div class="card-header">
+                <p>11) Corrígeme la frase</p>
+            </div>
+            <div class="card-body">
+                <h5 id="laFrase"></h5>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success border-radius" onclick="mostrarFrases()">Frases</button>
+                <button class="btn btn-success border-radius" onclick="mostrarFrasesExc()">¡Frases!</button>
+            </div>
+        </div>
+        <!-- fin -->
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+
+</html>
+
+<!-- CARD
+    <div class="card w-25 h-25 m-3">
+    <div class="card-header">
+        <p>Title</p>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <h5 id=""></h5>
+    </div>
+    <div class="card-footer text-center">
+        <button class="btn btn-success border-radius" onclick="function()">ver</button>
+    </div>
+</div> -->
